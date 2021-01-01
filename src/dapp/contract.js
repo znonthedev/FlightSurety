@@ -16,11 +16,10 @@ export default class Contract {
 
     initialize(callback) {
         this.web3.eth.getAccounts((error, accts) => {
-           
             this.owner = accts[0];
 
             let counter = 1;
-            
+             
             while(this.airlines.length < 5) {
                 this.airlines.push(accts[counter++]);
             }
